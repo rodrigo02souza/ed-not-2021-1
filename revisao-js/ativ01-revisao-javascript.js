@@ -29,73 +29,12 @@ let estado1 = {
    populacao: 2278308
 }
 
-let estado2 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
+let estado = {
+   nome: 1,
+   sigla: 2,
+   area: 3,
+   populacao: 4
 }
-
-let estado3 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-let estado4 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-let estado5 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-let estado6 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-let estado7 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-let estado8 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-let estado9 = {
-   nome: 'Sergipe',
-   sigla: 'SE',
-   area: 21915.08,
-   populacao: 2278308
-}
-
-
-   nome;sigla;area;populacao
-   Sergipe;SE;21915.08;2278308
-   Alagoas;AL;27848.14;3322820
-   Rio Grande do Norte;RN;52811.05;3479010
-   Paraíba;PB;56469.78;3996496
-   Pernambuco;PE;98148.32;9496294
-   Ceará;CE;148920.47;9075649
-   Piauí;PI;251577.74;3264531
-   Maranhão;MA;331937.45;7035055
-   Bahia;BA;564733.18;14812617
 
 
 estadosNe.push(estado1)
