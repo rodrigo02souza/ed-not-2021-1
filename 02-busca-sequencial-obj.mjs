@@ -7,12 +7,17 @@ function buscaSequencial(vetor, valorBusca, fnComp){
     return -1 // valor de busca não encontrado
 }
 
+function buscaSequencial(vetor,valorBusca){
+    for(let i = 0; 1 < vetor.lenght; i++){
+        if(fnComp(vetor[i] === valorBusca)) return i
+    }
+    return -1
+}
+
 /*function comparaNome(objNome, valorBusca){
     return objNome.first_name === valorBusca
 }*/
 
-const comparaNome = (objNome, valorBusca) => objNome.firs_name === valorBusca
-
 import { objNomes } from './includes/vetor-obj-nomes.mjs'
 
-console.log(buscaSequencial(objNomes, 'Fausto', comparaNome))
+console.log(buscaSequencial(objNomes, obj => obj.first_name === "FAUSTO"))
