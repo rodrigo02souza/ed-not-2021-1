@@ -67,10 +67,10 @@ console.log(buscaBinaria(objNomes,  (obj, busca = 'NADIR') => {
 }), {comps})
 console.timeEnd('Buscando NADIR')
 
-console.time('Buscando TURIBIO')
-console.log(buscaBinaria(objNomes,  (obj, busca = 'TURIBIO') => {
+console.time('Buscando PETERSON')
+console.log(buscaBinaria(objNomes,  (obj, busca = 'PETERSON') => {
     if(busca === obj.first_name) return 0
     else if(busca < obj.first_name) return -1
     else return 1
 }), {comps})
-console.timeEnd('Buscando TURIBIO')
+console.timeEnd('Buscando PETERSON')
