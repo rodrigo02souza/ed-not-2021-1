@@ -15,11 +15,6 @@
 
 */
 
-/*
-   1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
-      ao vetor estadosNe usando push().
-*/
-
 let estadosNe = []
 
 let estado1 = {
@@ -29,15 +24,13 @@ let estado1 = {
    populacao: 2278308
 }
 
-let estado = {
-   nome: 1,
-   sigla: 2,
-   area: 3,
-   populacao: 4
-}
-
-
 estadosNe.push(estado1)
+
+/*
+   1) Crie objetos para os demais Estados, segundo o modelo acima, e acrescente-os
+      ao vetor estadosNe usando push().
+*/
+
 /*
    2) Escreva uma arrow function que receba dois parâmetros, área e população, e
       calcule a densidade demográfica retornando o resultado da divisão da

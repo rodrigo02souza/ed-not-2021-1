@@ -1,93 +1,89 @@
-/*
-    *OBJETOS*
-    São estruturas que permitem armazenar diversos valores em uma mesma variavel,
-        permitindo acessa-los por meio de um nome
-*/
+// Objetos são estruturas que permitem armazenar diversos valores
+// em uma mesma variável, permitindo acessá-los por meio de um nome
 
-//  COMO CRIAR:
+// Criação de um objeto vazio
+let vazio1 = {}                 // Forma "moderna"
+let vazio2 = new Object()       // Forma "tradicional"
 
- 
-//Forma antiga/tradicional
-
-let vazio2 = new Object()
-
-//Forma "moderna"
-
-let vazio1 = {}
-
-console.log ('*********************************************************')
-
-//CRIANDO COM DADOS:
-
-let pessoa = { //quebra de linha apenas por facilitar leitura
-
-    //os dados sao armazenados no formato 
-    //propriedade: valor (antes e depois dos :)
-    //ou tambem chamado de 
-    //atributo: valor (antes e depois dos :)
-    nome: 'Vraulinelson Garibaldi',
+// Criando um objeto já com dados
+let pessoa = {
+    // Os dados são armazendos no formato
+    // propriedade: valor
+    // ou também chamado de 
+    // atributo: valor
+    nome: 'Orkutilson de Oliveira',
     sexo: 'M',
     dataNasc: '2008-04-19',
-    ocupação: 'faz nada, vagabundo esse cara, slc',
-    //nome da propriedade pode ter espaços ou acentos, nesses casos precisa estar entre aspas
-    'cidade de origem' : 'França',
-    gostos: ['jogos','come','bater'] //vetor em posicao de objeto, mas bagunca o console table
-
+    ocupacao: 'estudante',
+    // Nome da propriedade pode ter espaços ou acento.
+    // Nesse caso, o nome da propriedade precisa estar entre aspas
+    'cidade de origem': 'Franca/SP',
+    gostos: ['jogos', 'doces', 'dormir'] // Vetor em uma posição de objeto
 }
+console.log(pessoa)
+console.table(pessoa)
 
-console.table(pessoa) //mostra em tabela
+// Exibindo apenas o valor de uma propriedade
+console.log(pessoa.nome)
+console.log(pessoa.ocupacao)
+// Quando o nome da a propriedade tem espaços ou acento, não é possível
+// usar a sintaxe de ponto. É necessário usar a sintaxe de colchetes.
+console.log(pessoa['cidade de origem'])
+console.log(pessoa.gostos)
 
-console.log ('*********************************************************')
+// A sintaxe dos colchetes SEMPRE funciona, mesmo se o nome da propriedade
+// for uma única palavra sem acento
+console.log(pessoa['nome'])
+console.log(pessoa['gostos'][1]) // Mostrando só o 2º gosto
 
-//exibindo apenas uma propriedade
-console.log('Nome do corno:',pessoa.nome)
+// Outra consequência da sintaxe dos colchetes é a possibilidade de
+// usar nomes de propriedades que estão dentro de variáveis
 
-//qunado a propriedade tem espaços/acentos é impossivel usar a sintaxe do pontinho
-//é necessario usar a de colchetes
-//a sintaxe dos colchetes sempre funciona, mesmo se o nome da propriedade for uma unica palavra e sem acento
-
-
-console.log('Cidade de origem do corno/corna:',pessoa['cidade de origem'])
-
-
-//para pegar propriedade de vetor dentro de objeto:
-console.log('Para ver posicao 1 de vetor dentro de objeto:',pessoa.gostos[1])
-
-console.log ('*********************************************************')
-
-console.log('consequencia do uso da sintaxe dos colchetes:') 
-//outra consequencia da sintaxe dos colchetes é a possibilidade de usar nomes de propriedades
-//que estao dentro de variaveis
 let x = 'sexo'
 console.log(pessoa[x])
 x = 'dataNasc'
 console.log(pessoa[x])
 
-console.log ('*********************************************************')
-
-//colocando propriedade em objeto ja existente:
-console.log('colocando propriedade em objeto ja existente(email):')
-pessoa.email = 'frantieskovirgoliniiiiiiii@gmail.com.br.gov.org'
-
+// Criando uma nova propriedade para um objeto já existente
+// Basta atribuir um valor a um nome de propriedade ainda não existente
+pessoa.email = 'orkutilson@gmail.com'
+pessoa.celular = '(16) 98765-4321'
 console.table(pessoa)
 
-console.log ('******************************************************************************************************************')
-
-//criando um objeto vazio e so depois adicionando:
-console.log('Criando objeto e adicionando coisinhas:')
-
+// Criando um objeto vazio e só depois adicionando propriedades
 let carro = {}
-
-carro.modelo = 'volksvagendslds'
-carro.marca = 'Kombi'
-carro.ano = '2030'
-carro['combustível'] = 'gasoline bitch'
+carro.marca = 'Volkswagen'
+carro.modelo = 'Kombi'
+carro.ano = 1971
+carro['combustível'] = 'gasolina'
+carro.cor = 'bege'
 
 console.table(carro)
 
-//OBLITERAR PROPRIEDADES:
-
-//OBLITERANDO A PROPRIEDADE CARRO
+// Excluindo uma propriedade de um objeto
 delete carro.ano
 
 console.table(carro)
+
+console.log('---------------------------------')
+
+// Exibindo todas as propriedades de um objeto
+// for..in determina quais as propriedades de um objeto e
+// coloca cada uma delas em uma variável informada pelo
+// usuário (p, no caso) a cada iteração do loop
+for(let p in pessoa) {
+    console.log(p)
+}
+
+console.log('---------------------------------')
+
+for(let p in carro) {
+    console.log(p)
+}
+
+console.log('---------------------------------')
+
+// for..in para listar propriedades e valores de um objeto
+for(let atrib in pessoa) {
+    console.log(atrib + ' -> ' + pessoa[atrib])
+}

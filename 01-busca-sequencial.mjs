@@ -130,3 +130,7 @@ console.timeEnd('Buscando AARAO')
 console.time('Buscando JUREMA')
 console.log(buscaSequencial(nomes, 'JUREMA'))
 console.timeEnd('Buscando JUREMA')
+
+
+
+
